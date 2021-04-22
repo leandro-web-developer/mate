@@ -20,7 +20,7 @@
             }
         </style>
     </head>
-    <body class="antialiased" style="background: url(https://www.netuy.net/semi_dedicados/) center cover no-repeat">
+    <body class="antialiased" style="background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg) center cover no-repeat">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-4 offset-lg-6 glass-container" id="glass">
