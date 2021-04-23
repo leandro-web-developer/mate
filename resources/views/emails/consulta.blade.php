@@ -34,22 +34,22 @@
                 <div class="row">
                     <div class="col-12 border-bottom py-2">
                         <h2><strong>¡Interesado en el dominio!</strong></h2>
-                        <h5>{{ $request->nombre }} está interesado en el dominio mate.uy</h5>
+                        <h5>{{ $data['nombre'] }} está interesado en el dominio mate.uy</h5>
                     </div>
 
                     <div class="col-12 py-2">
                         <table class="table table-striper">
                             <tr>
-                                <tr>Celular:</tr>
-                                <tr>{{ $request->celular }}</tr>
+                                <td>Celular:</td>
+                                <td>{{ $data['celular'] }}</td>
                             </tr>
                             <tr>
-                                <tr>Email:</tr>
-                                <tr>{{ $request->email }}</tr>
+                                <td>Email:</td>
+                                <td>{{ $data['email'] }}</td>
                             </tr>
                             <tr>
-                                <tr>Mensaje</tr>
-                                <tr>{{ $request->mensaje }}</tr>
+                                <td>Mensaje</td>
+                                <td>{{ $data['mensaje'] }}</td>
                             </tr>
                         </table>
                     </div>

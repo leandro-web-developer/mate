@@ -59,21 +59,21 @@
                                     <label for="nombre">Nombre</label>
                                     <div class="input-group">
                                         <input id="nombre" name="nombre" placeholder="John Doe" type="text"
-                                            required="required" class="form-control">
+                                            required="required" class="form-control" value="asd">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="celular">Celular</label>
                                     <div class="input-group">
                                         <input id="celular" name="celular" placeholder="091234567" type="text"
-                                            required="required" class="form-control">
+                                            required="required" class="form-control" value="0329482">
                                     </div>
                                 </div>
                                 <div class="form-group col-12">
                                     <label for="email">Email</label>
                                     <div class="input-group">
                                         <input id="email" name="email" placeholder="tuemail@ejemplo.com" type="text"
-                                            required="required" class="form-control">
+                                            required="required" class="form-control" value="asd@asd.com">
                                     </div>
                                 </div>
                                 <div class="form-group col-12">
