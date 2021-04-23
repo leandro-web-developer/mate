@@ -12,10 +12,11 @@ class EmailController extends Controller
     public function store(Request $request)
     {
         try {
-            if (Mail::to('leandro.m.docarmo@gmail.com')->send(new ConsultaDominio($request))) {
+            $email = Mail::to('leandro.m.docarmo@gmail.com')->send(new ConsultaDominio($request));
+            if ($email) {
                 return 'Email enviado';
             } else {
-                return 'Email no enviado';
+                return response()->json($email);
             }
         } catch (Exception $ec) {
             return response()->json($ec);
