@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => 'mailgun',
+    'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => 'leandro.m.docarmo@gmail.com',
-        'name' => 'MATEUY WEB',
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*

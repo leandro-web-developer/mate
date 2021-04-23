@@ -12,16 +12,16 @@ class ConsultaDominio extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $request;
+    public $data;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct($data)
     {
-        $this->request = $request;
+        $this->data = $data;
     }
 
     /**
