@@ -27,6 +27,7 @@ class EmailController extends Controller
                 $message->subject('Consulta por MATEUY');
               });
 
+return "echo";
             // Mail::send(
             //     'emails.consulta',
             //     $data,
