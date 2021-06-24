@@ -56,11 +56,13 @@
         <div class="row">
             <div class="col-md-5 offset-md-7 glass-container mt-5 p-3" id="glass">
                 <div class="row">
+
                     <div class="col-12 py-2">
                         <h2><strong>¡El dominio mate.uy está en venta!</strong></h2>
                         <h5 class="py-3">Si te interesa adquirirlo comunicate conmigo haciendo clic en el siguiente botón:</h5>
                         <a class="btn btn-success" href="https://wa.me/59899823128" id="whatsapp"><img src="{{ asset('img/whatsapp.svg') }}"> 099 823 128</a>
                     </div>
+                    
                 </div>
             </div>
         </div>
