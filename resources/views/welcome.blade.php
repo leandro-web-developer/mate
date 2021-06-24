@@ -18,19 +18,12 @@
     <link href="/css/app.css" rel="stylesheet">
 
     <style>
-<<<<<<< HEAD
         html, body{height:100%;width:100%;margin:0;padding:0;}
-=======
->>>>>>> 296a4ffd7b3987beab24fd950f542817e90e8c72
         body {
             font-family: 'Nunito', sans-serif;
             background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg');
             background-size: cover;
-<<<<<<< HEAD
             background-repeat: no-repeat;
-=======
-            background-repeat: none;
->>>>>>> 296a4ffd7b3987beab24fd950f542817e90e8c72
         }
 
         .glass-container {
@@ -46,7 +39,6 @@
             border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
             border-right: 0px rgba(40, 40, 40, 0.35) solid;
         }
-<<<<<<< HEAD
 
         #whatsapp{
             font-size: 1.5rem;
@@ -56,8 +48,6 @@
             float: left;
             margin-right: 10px;
         }
-=======
->>>>>>> 296a4ffd7b3987beab24fd950f542817e90e8c72
     </style>
 </head>
 
