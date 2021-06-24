@@ -18,11 +18,12 @@
     <link href="/css/app.css" rel="stylesheet">
 
     <style>
+        html, body{height:100%;width:100%;margin:0;padding:0;}
         body {
             font-family: 'Nunito', sans-serif;
             background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg');
             background-size: cover;
-            background-repeat: none;
+            background-repeat: no-repeat;
         }
 
         .glass-container {
@@ -38,6 +39,15 @@
             border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
             border-right: 0px rgba(40, 40, 40, 0.35) solid;
         }
+
+        #whatsapp{
+            font-size: 1.5rem;
+        }
+        #whatsapp img{
+            height: 30px;
+            float: left;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -46,46 +56,10 @@
         <div class="row">
             <div class="col-md-5 offset-md-7 glass-container mt-5 p-3" id="glass">
                 <div class="row">
-                    <div class="col-12 border-bottom py-2">
-                        <h2><strong>¡El dominio mate.uy está en venta!</strong></h2>
-                        <h5>Completá el siguiente formulario y me pongo en contacto a la brevedad</h5>
-                    </div>
-
                     <div class="col-12 py-2">
-                        <form method="post" action="enviar">
-                            @csrf
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="nombre">Nombre</label>
-                                    <div class="input-group">
-                                        <input id="nombre" name="nombre" placeholder="John Doe" type="text"
-                                            required="required" class="form-control" value="asd">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="celular">Celular</label>
-                                    <div class="input-group">
-                                        <input id="celular" name="celular" placeholder="091234567" type="text"
-                                            required="required" class="form-control" value="0329482">
-                                    </div>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label for="email">Email</label>
-                                    <div class="input-group">
-                                        <input id="email" name="email" placeholder="tuemail@ejemplo.com" type="text"
-                                            required="required" class="form-control" value="asd@asd.com">
-                                    </div>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label for="mensaje">Mensaje</label>
-                                    <textarea id="mensaje" name="mensaje" cols="40" rows="5"
-                                        class="form-control">Estoy interesado en el dominio mate.uy</textarea>
-                                </div>
-                                <div class="form-group col-12">
-                                    <button name="submit" type="submit" class="btn btn-primary">Enviar</button>
-                                </div>
-                            </div>
-                        </form>
+                        <h2><strong>¡El dominio mate.uy está en venta!</strong></h2>
+                        <h5 class="py-3">Si te interesa adquirirlo comunicate conmigo haciendo clic en el siguiente botón:</h5>
+                        <a class="btn btn-success" href="https://wa.me/59899823128" id="whatsapp"><img src="{{ asset('img/whatsapp.svg') }}"> 099 823 128</a>
                     </div>
                 </div>
             </div>
