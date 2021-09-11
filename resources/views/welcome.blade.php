@@ -27,7 +27,7 @@
             <div class="col-md-5 offset-md-7 glass-container mt-5 p-3" id="glass">
                 <div class="row">
                     <div class="col-12 py-2">
-                    <?php
+                        <?php
 
 header('content-type:text/plain');
 // define the URL to load
@@ -44,7 +44,7 @@ $html = curl_exec($ch);
 // important)
 curl_close($ch);
 
-                    if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m){
+                    if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m)){
                         for($i=0, $i<count($m[0]), $i++){
                             $url = $m[1][$i];
                             $titulo = $m[2][$i];
@@ -52,7 +52,7 @@ curl_close($ch);
                         }
                     }
                     ?>
-                    
+
 
                     </div>
 
