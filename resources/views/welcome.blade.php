@@ -31,7 +31,7 @@
 
 header('content-type:text/plain');
 // define the URL to load
-$url = 'https://diarioelpueblo.com.uy/';
+$url = 'https://www.elpais.com.uy/';
 // start cURL
 $ch = curl_init(); 
 // tell cURL what the URL is
