@@ -29,23 +29,16 @@
                     <div class="col-12 py-2">
                         <?php
 
-header('content-type:text/plain');
-// define the URL to load
-$url = 'https://www.elpais.com.uy/';
-// start cURL
-$ch = curl_init(); 
-// tell cURL what the URL is
-curl_setopt($ch, CURLOPT_URL, $url); 
-// tell cURL that you want the data back from that URL
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-// run cURL
-$html = curl_exec($ch); 
-// end the cURL call (this also cleans up memory so it is 
-// important)
-curl_close($ch);
+                    header('content-type:text/plain');
+                    $url = 'https://www.elpais.com.uy/';
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, $url);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                    $html = curl_exec($ch);
+                    curl_close($ch);
 
                     if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m)){
-                        for($i=0, $i<count($m[0]), $i++){
+                        for($i=0; $i < count($m[0]); $i++){
                             $url = $m[1][$i];
                             $titulo = $m[2][$i];
                             echo "<a href='{$url}' target='_blank'>{$titulo}</a>"
