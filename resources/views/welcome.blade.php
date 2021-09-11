@@ -39,9 +39,9 @@
 
                     if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m)){
                         for($i=0; $i < count($m[0]); $i++){
-                            $url = $m[1][$i];
+                            $urlx = $m[1][$i];
                             $titulo = $m[2][$i];
-                            echo "<div class='col-12 py-2'><a href='{$url}' target='_blank'>{$titulo}</a></div>";
+                            echo "<div class='col-12 py-2'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
                         }
                     }
                     ?>
