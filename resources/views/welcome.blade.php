@@ -41,7 +41,7 @@
                         for($i=0; $i < count($m[0]); $i++){
                             $url = $m[1][$i];
                             $titulo = $m[2][$i];
-                            echo "<a href='{$url}' target='_blank'>{$titulo}</a>";
+                            echo "<div class='col-12 py-2'><a href='{$url}' target='_blank'>{$titulo}</a></div>";
                         }
                     }
                     ?>
