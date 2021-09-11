@@ -37,8 +37,9 @@
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                         $html = curl_exec($ch);
                         curl_close($ch);
-                        
-                        if (preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
+                        $pm = preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu';
+                            var_dump($pm);
+                        if ($pm, $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
                             for ($i = 0; $i < count($m[0]); $i++) {
                                 $img = $m[1][$i];
