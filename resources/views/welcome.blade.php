@@ -30,7 +30,7 @@
                         <?php
 
                     header('content-type:text/plain');
-                    $url = 'https://www.elpais.com.uy/';
+                    $url = 'https://www.elpais.com.uy';
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, $url);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
