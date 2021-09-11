@@ -18,36 +18,6 @@
     <link href="/css/app.css" rel="stylesheet">
 
     <style>
-        html, body{height:100%;width:100%;margin:0;padding:0;}
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .glass-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(15px);
-            background-color: rgba(255, 255, 255, 0.375);
-            box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-            border: 0px rgba(255, 255, 255, 0.4) solid;
-            border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
-            border-right: 0px rgba(40, 40, 40, 0.35) solid;
-        }
-
-        #whatsapp{
-            font-size: 1.5rem;
-        }
-        #whatsapp img{
-            height: 30px;
-            float: left;
-            margin-right: 10px;
-        }
     </style>
 </head>
 
@@ -56,13 +26,42 @@
         <div class="row">
             <div class="col-md-5 offset-md-7 glass-container mt-5 p-3" id="glass">
                 <div class="row">
+                    <div class="col-12 py-2">
+                    <?php
+
+header('content-type:text/plain');
+// define the URL to load
+$url = 'https://diarioelpueblo.com.uy/';
+// start cURL
+$ch = curl_init(); 
+// tell cURL what the URL is
+curl_setopt($ch, CURLOPT_URL, $url); 
+// tell cURL that you want the data back from that URL
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+// run cURL
+$output = curl_exec($ch); 
+// end the cURL call (this also cleans up memory so it is 
+// important)
+curl_close($ch);
+// display the output
+echo $output;
+                    // $html = "curl to html";
+                    // if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m){
+                    //     for($i=0, $i<count($m[0]), $i++){
+                    //         $url = $m[1][$i];
+                    //         $titulo = $m[2][$i];
+                    //         echo "<a href='{$url}' target='_blank'>{$titulo}</a>"
+                    //     }
+                    // }
+                    ?>
+                    
+
+                    </div>
 
                     <div class="col-12 py-2">
-                        <h2><strong>¡El dominio mate.uy está en venta!</strong></h2>
-                        <h5 class="py-3">Si te interesa adquirirlo comunicate conmigo haciendo clic en el siguiente botón:</h5>
-                        <a class="btn btn-success" href="https://wa.me/59899823128" id="whatsapp"><img src="{{ asset('img/whatsapp.svg') }}"> 099 823 128</a>
+                        <h1></h1>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
