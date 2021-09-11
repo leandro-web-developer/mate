@@ -42,12 +42,12 @@
                         // if (preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
                             for ($i = 0; $i < count($m[0]); $i++) {
-                                $img = $m[1][$i];
-                                $urlx = $m[2][$i];
-                                $titulo = $m[3][$i];
+                                // $img = $m[1][$i];
+                                $urlx = $m[1][$i];
+                                $titulo = $m[2][$i];
                                 echo "<div class='col-12 py-2'>";
                                 echo "<div class='row'>";
-                                echo "<div class='col-6'><img src='{$img}' class='img-responsive' alt='{$titulo}'></div>";
+                                // echo "<div class='col-6'><img src='{$img}' class='img-responsive' alt='{$titulo}'></div>";
                                 echo "<div class='col-6'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
                                 echo "</div>";
                                 echo "</div>";
