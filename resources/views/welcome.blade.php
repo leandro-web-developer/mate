@@ -39,20 +39,18 @@ curl_setopt($ch, CURLOPT_URL, $url);
 // tell cURL that you want the data back from that URL
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 // run cURL
-$output = curl_exec($ch); 
+$html = curl_exec($ch); 
 // end the cURL call (this also cleans up memory so it is 
 // important)
 curl_close($ch);
-// display the output
-echo $output;
-                    // $html = "curl to html";
-                    // if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m){
-                    //     for($i=0, $i<count($m[0]), $i++){
-                    //         $url = $m[1][$i];
-                    //         $titulo = $m[2][$i];
-                    //         echo "<a href='{$url}' target='_blank'>{$titulo}</a>"
-                    //     }
-                    // }
+
+                    if(preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m){
+                        for($i=0, $i<count($m[0]), $i++){
+                            $url = $m[1][$i];
+                            $titulo = $m[2][$i];
+                            echo "<a href='{$url}' target='_blank'>{$titulo}</a>"
+                        }
+                    }
                     ?>
                     
 
