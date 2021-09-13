@@ -59,7 +59,9 @@
                                 foreach ($arr_elpais as $i) {
                                     echo "<div class='col-12 py-2'>";
                                     echo "<div class='row'>";
-                                    echo "<div class='col-6'><img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
+                                    if ($i['i']) {
+                                        echo "<div class='col-6'><img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
+                                    }
                                     echo "<div class='col-6'><a href='{$i['u']}' target='_blank'>{$i['t']}</a></div>";
                                     echo '</div>';
                                     echo '</div>';
