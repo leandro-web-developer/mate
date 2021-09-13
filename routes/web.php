@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::post('enviar', [App\Http\Controllers\EmailController::class, 'store']);
 
-Route::get('fopen', [App\Http\Controllers\EditorController::class, 'elPais']);
+Route::get('elpais', [App\Http\Controllers\EditorController::class, 'elPais']);
+Route::get('elobservador', [App\Http\Controllers\EditorController::class, 'elObservador']);
