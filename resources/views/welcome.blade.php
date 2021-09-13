@@ -62,7 +62,9 @@
                                     if (array_key_exists('i', $i)) {
                                         echo "<div class='col-6'><img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
                                     }
-                                    echo "<div class='col-6'><a href='{$i['u']}' target='_blank'>{$i['t']}</a></div>";
+                                    if (array_key_exists('u', $i)) {
+                                        echo "<div class='col-6'><a href='{$i['u']}' target='_blank'>{$i['t']}</a></div>";
+                                    }
                                     echo '</div>';
                                     echo '</div>';
                                 }
