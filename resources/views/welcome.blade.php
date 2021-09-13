@@ -52,7 +52,7 @@
     <div class="container">
         <div class="row">
 
-            
+            @include('diarios.elpais')
 
             <div class="col-12 py-2">
                 <h1></h1>

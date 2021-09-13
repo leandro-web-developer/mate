@@ -71,9 +71,7 @@ class EditorController extends Controller
                 $ourFileName = "/var/www/lea/mate/resources/views/diarios/elpais.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
 
-                $written =  "<html><body><h1>COSOSOSOSOSOSO</h1></body></html>";
-
-                fwrite($ourFileHandle, $written);
+                fwrite($ourFileHandle, $elpais);
 
                 fclose($ourFileHandle);
                 return view('diarios.elpais');
