@@ -36,25 +36,30 @@
                         curl_setopt($ch, CURLOPT_URL, $url);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                         $html = curl_exec($ch);
-                        $html = preg_replace('!\n!','',$html);
-                        var_dump($html);die();
+                        $html = preg_replace('!\n!', '', $html);
                         curl_close($ch);
                         
-                        if (preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
-                        // if (preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
+                        if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
                             for ($i = 0; $i < count($m[0]); $i++) {
-                                // $img = $m[1][$i];
-                                $urlx = $m[1][$i];
-                                $titulo = $m[2][$i];
-                                echo "<div class='col-12 py-2'>";
-                                echo "<div class='row'>";
-                                // echo "<div class='col-6'><img src='{$img}' class='img-responsive' alt='{$titulo}'></div>";
-                                echo "<div class='col-6'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
-                                echo "</div>";
-                                echo "</div>";
+                                if (preg_match('!<img[^>]*src="([^>]+)"!iu', $m[0][$i], $img)) {
+                                    echo "<div class='col-6'><img src='{$img}' class='img-responsive' alt='{titulo}'></div>";
+                                }
                             }
                         }
+                        
+                        // if (preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
+                        
+                        // $img = $m[1][$i];
+                        // $urlx = $m[1][$i];
+                        // $titulo = $m[2][$i];
+                        // echo "<div class='col-12 py-2'>";
+                        // echo "<div class='row'>";
+                        // // 
+                        // echo "<div class='col-6'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
+                        // echo "</div>";
+                        // echo "</div>";
+                        // }
                         
                         // EL PUEBLO -----------
                         $url = 'https://diarioelpueblo.com.uy';
