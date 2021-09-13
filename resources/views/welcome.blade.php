@@ -67,21 +67,21 @@
                     echo "  <div class='col-12 py-2'>";
                     echo "      <div class='row'>";
                     foreach ($arr_elpais as $i) {
-                        echo "       <div class='col-6 col-sm-4 col-md-3 py-2'>";
-                        echo "          <div class='card-sl noticia'>";
-                        echo "              <div class='card-image'>";
-                        if (array_key_exists('i', $i)) {
-                            echo "              <img src='{$i['i']}' alt='{$i['t']}' />";
-                        } else {
-                            echo "              <img src='" . asset('img/no-image.svg') . "' alt='Mate.uy - Sin foto' />";
-                        }
-                        echo '              </div>';
                         if (array_key_exists('u', $i)) {
-                            echo "          <div class='card-text'>{$i['t']}</div>";
-                            echo "          <a href='{$i['u']}' class='card-button'>Ver en El País</a>";
+                            echo "       <div class='col-6 col-sm-4 col-md-3 py-2'>";
+                            echo "          <div class='card-sl noticia'>";
+                            echo "              <div class='card-image'>";
+                            if (array_key_exists('i', $i)) {
+                                echo "              <img src='{$i['i']}' alt='{$i['t']}' />";
+                            } else {
+                                echo "              <img src='" . asset('img/no-image.svg') . "' alt='Mate.uy - Sin foto' />";
+                            }
+                            echo '              </div>';
+                            echo "              <div class='card-text'>{$i['t']}</div>";
+                            echo "              <a href='{$i['u']}' class='card-button'>Ver en El País</a>";
+                            echo '          </div>';
+                            echo '       </div>';
                         }
-                        echo '          </div>';
-                        echo '       </div>';
                     }
                     echo '      </div>';
                     echo '  </div>';
