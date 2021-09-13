@@ -27,7 +27,7 @@
 <body class="antialiased" style="padding-top:100px;">
     <nav class="navbar fixed-top navbar-light bg-light">
         <span>Noticias:</span>
-        <a class="navbar-brand" href="#">El País</a>
+        <a class="navbar-brand" href="#noticas-el-pais">El País</a>
         <a class="navbar-brand" href="#">El Observador</a>
         <a class="navbar-brand" href="#">La diaria</a>
         <a class="navbar-brand" href="#">Caras y caretas</a>
@@ -54,7 +54,7 @@
             
             // BUSCO ARTICULOS -----
             if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
-                echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
+                echo '<H1 class="py-4" id="noticas-el-pais">NOTICIAS DE DIARIO EL PAÍS</H1>';
                 $arr_elpais = [];
                 $x = [];
                 for ($i = 0; $i < count($m[0]); $i++) {
@@ -132,6 +132,24 @@
             </div>
 
         </div>
+
+        <script>
+            $(document).ready(function() {
+                $('a[href^="#"]').click(function() {
+                    var destino = $(this.hash);
+                    if (destino.length == 0) {
+                        destino = $('a[name="' + this.hash.substr(1) + '"]');
+                    }
+                    if (destino.length == 0) {
+                        destino = $('html');
+                    }
+                    $('html, body').animate({
+                        scrollTop: destino.offset().top
+                    }, 500);
+                    return false;
+                });
+            });
+        </script>
 </body>
 
 </html>
