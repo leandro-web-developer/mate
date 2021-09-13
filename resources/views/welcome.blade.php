@@ -42,7 +42,7 @@
                         if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
                             for ($i = 0; $i < count($m[0]); $i++) {
-                                if (preg_match('!<img[^>]*src="([^>]+)"!iu', $m[0][$i], $img)) {
+                                if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
                                     echo "<div class='col-6'><img src='{$img[1]}' class='img-responsive' alt='{titulo}'></div>";
                                 }
                             }
