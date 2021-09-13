@@ -59,8 +59,6 @@ class EditorController extends Controller
 
         // BUSCO ARTICULOS -----
         if (preg_match_all('!<div class="\s*linea[^>]>\s*<a href="([^"]+)">\s*<div class="imagen.*?">\s*<figure class="figure">.*?<img .*?data-src="([^"]+)".*?</a>.*?<h3 class="volanta .*?">.*?title="([^"]+)">.*?</a>\s*</h3>\s*<h2.*?>.*?>([^<]+)</a>!iu', $html, $m)) {
-            return $m;
-
             $arr_elobservador = [];
             for ($i = 0; $i < count($m[0]); $i++) {
                 // EN CADA ARTICULO BUSCO URL Y TITULO -----
