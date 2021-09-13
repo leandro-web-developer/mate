@@ -67,9 +67,16 @@ class EditorController extends Controller
                 $elpais .= '  </div>';
                 $elpais .= '</div>';
 
-                $pagina = fopen('/var/www/lea/mate/resources/views/diarios/elpais.blade.php', "r");
-                var_dump($pagina);
 
+                $ourFileName = "/var/www/lea/mate/resources/views/diarios/elpais.blade.php";
+                $ourFileHandle = fopen($ourFileName, 'w');
+
+                $written =  "<html><body><h1>COSOSOSOSOSOSO</h1></body></html>";
+
+                fwrite($ourFileHandle, $written);
+
+                fclose($ourFileHandle);
+                return view('diarios.elpais');
             }
         }
     }
