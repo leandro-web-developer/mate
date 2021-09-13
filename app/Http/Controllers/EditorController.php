@@ -74,7 +74,7 @@ class EditorController extends Controller
                 fwrite($ourFileHandle, $elpais);
 
                 fclose($ourFileHandle);
-                return view('diarios.elpais');
+                return view('welcome');
             }
         }
     }
