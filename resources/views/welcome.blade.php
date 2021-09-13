@@ -5,7 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Mate.uy</title>
+
+    <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+    <META NAME="AUTHOR" CONTENT="Leandro do Carmo">
+    <META NAME="REPLY-TO" CONTENT="leandro.m.docarmo@gmail.com">
+    <LINK REV="made" href="mailto:leandro.m.docarmo@gmail.com">
+    <META NAME="DESCRIPTION"
+        CONTENT="Portal que reúne los principales diarios de noticias de Uruguay, El País, El Observador, La Diaria y Caras y Caretas. Además te mostramos información sobre el mate (infusión) y nuestro país Uruguay.">
+    <META NAME="KEYWORDS"
+        CONTENT="Noticias,Mate,Uruguay,Diario,Periódico,Portal,El País,El Observador,La Diaria,Caras y Caretas">
+    <META NAME="Resource-type" CONTENT="Journal">
+    <META NAME="Revisit-after" CONTENT="1 days">
+    <META NAME="robots" content="ALL">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,7 +37,7 @@
 </head>
 
 <body class="antialiased" style="padding-top:100px;">
-    <nav class="navbar fixed-top navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-dark bg-dark text-white">
         <span>Noticias:</span>
         <a class="navbar-brand" href="#noticas-el-pais">El País</a>
         <a class="navbar-brand" href="#">El Observador</a>
@@ -133,7 +145,8 @@
 
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <script>
             $(document).ready(function() {
