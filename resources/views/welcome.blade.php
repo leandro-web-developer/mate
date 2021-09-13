@@ -41,42 +41,44 @@
                         
                         if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
+                            $arr_elpais = [];
                             for ($i = 0; $i < count($m[0]); $i++) {
-                                if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
-                                    echo "<div class='col-6'><img src='{$img[1]}' class='img-responsive' alt='{titulo}'></div>";
+                                if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $img)) {
+                                    $x['u'] = $url . $m[1][$i];
+                                    $x['t'] = $m[2][$i];
+                        
+                                    if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
+                                        $x['i'] = $img[1];
+                                    }
                                 }
+                                $arr_elpais[] = $x;
+                            }
+                            foreach ($arr_elpais as $i) {
+                                echo "<div class='col-12 py-2'>";
+                                echo "<div class='row'>";
+                                echo "<div class='col-6'><img src='{$i["i"]}' class='img-responsive' alt='{$i["t"]}'></div>";
+                                echo "<div class='col-6'><a href='{$i["u"]}' target='_blank'>{$i["t"]}</a></div>";
+                                echo "</div>";
+                                echo "</div>";
                             }
                         }
-                        
-                        // if (preg_match_all('!<arti[^>]*>\s*<div class="image-container">\s*<a[^>]*><img[^>]*src="([^>]+)"[^>]*></a>[^>]*>[^>]<[^>]*>\s*<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
-                        
-                        // $img = $m[1][$i];
-                        // $urlx = $m[1][$i];
-                        // $titulo = $m[2][$i];
-                        // echo "<div class='col-12 py-2'>";
-                        // echo "<div class='row'>";
-                        // // 
-                        // echo "<div class='col-6'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
-                        // echo "</div>";
-                        // echo "</div>";
-                        // }
                         
                         // EL PUEBLO -----------
-                        $url = 'https://diarioelpueblo.com.uy';
-                        $ch = curl_init();
-                        curl_setopt($ch, CURLOPT_URL, $url);
-                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                        $html = curl_exec($ch);
-                        curl_close($ch);
+                        // $url = 'https://diarioelpueblo.com.uy';
+                        // $ch = curl_init();
+                        // curl_setopt($ch, CURLOPT_URL, $url);
+                        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                        // $html = curl_exec($ch);
+                        // curl_close($ch);
                         
-                        if (preg_match_all('!<h3 class="m_title[^>]*>\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m)) {
-                            echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PUEBLO DE SALTO</H1>';
-                            for ($i = 0; $i < count($m[0]); $i++) {
-                                $urlx = $m[1][$i];
-                                $titulo = $m[2][$i];
-                                echo "<div class='col-12 py-2'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
-                            }
-                        }
+                        // if (preg_match_all('!<h3 class="m_title[^>]*>\s*<a [^>]*href="([^"]+)">([^<]+)</a>!iu', $html, $m)) {
+                        //     echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PUEBLO DE SALTO</H1>';
+                        //     for ($i = 0; $i < count($m[0]); $i++) {
+                        //         $urlx = $m[1][$i];
+                        //         $titulo = $m[2][$i];
+                        //         echo "<div class='col-12 py-2'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
+                        //     }
+                        // }
                         ?>
 
 
