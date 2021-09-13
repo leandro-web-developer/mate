@@ -18,6 +18,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
+        .noticia p {
+            flex: 2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     </style>
 </head>
 
@@ -64,7 +71,7 @@
                     echo "  <div class='col-12 py-2'>";
                     echo "      <div class='row'>";
                     foreach ($arr_elpais as $i) {
-                        echo "       <div class='col-6 col-sm-3 col-md-4'>";
+                        echo "       <div class='col-6 col-sm-4 col-md-3 noticia'>";
                         if (array_key_exists('i', $i)) {
                             echo "      <img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'>";
                         }
