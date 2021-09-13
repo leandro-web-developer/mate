@@ -20,15 +20,14 @@ class EditorController extends Controller
 
         // BUSCO ARTICULOS -----
         if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
-            return $m;
             $arr_elpais = [];
-            $x = [];
             for ($i = 0; $i < count($m[0]); $i++) {
                 // EN CADA ARTICULO BUSCO URL Y TITULO -----
                 if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h) || preg_match('!<h1 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h)) {
                     $uri = $url . $h[1];
                     // SOLO AGREGO AL ARRAY GENERAL SI NO EXISTE YA EN EL MISMO -----
                     if (!array_search($uri, array_column($arr_elpais, 'u'))) {
+                        $x = [];
                         $x['u'] = $uri;
                         $x['t'] = $h[2];
 
@@ -36,9 +35,9 @@ class EditorController extends Controller
                         if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
                             $x['i'] = $img[1];
                         }
+                        $arr_elpais[] = $x;
                     }
                 }
-                $arr_elpais[] = $x;
             }
 
             if (count($arr_elpais) > 0) {
