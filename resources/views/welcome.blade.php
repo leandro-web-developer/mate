@@ -42,6 +42,7 @@
                         if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
                             echo '<H1 class="py-4">NOTICIAS DE DIARIO EL PAÍS</H1>';
                             $arr_elpais = [];
+                            $x = [];
                             for ($i = 0; $i < count($m[0]); $i++) {
                                 if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $img)) {
                                     $x['u'] = $url . $m[1][$i];
