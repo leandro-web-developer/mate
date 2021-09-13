@@ -24,13 +24,13 @@
     </style>
 </head>
 
-<body class="antialiased" style="">
+<body class="antialiased" style="padding-top:100px;">
     <nav class="navbar fixed-top navbar-light bg-light">
         <span>Noticias:</span>
-        <a class="navbar-brand" href="#">xxxxx</a>
-        <a class="navbar-brand" href="#">xxxxx</a>
-        <a class="navbar-brand" href="#">xxxxx</a>
-        <a class="navbar-brand" href="#">xxxxx</a>
+        <a class="navbar-brand" href="#">El País</a>
+        <a class="navbar-brand" href="#">El Observador</a>
+        <a class="navbar-brand" href="#">La diaria</a>
+        <a class="navbar-brand" href="#">Caras y caretas</a>
         <span> | </span>
         Sobre el mate
         <span> | </span>
