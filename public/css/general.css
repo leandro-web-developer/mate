@@ -21,7 +21,8 @@ a {
   margin: 10px auto 10px 50%;
 }
 .card-image img {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .card-action {
