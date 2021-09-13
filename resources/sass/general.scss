@@ -5,21 +5,25 @@ a {
 /* Card Styles */
 
 .card-sl {
-    border-radius: 8px;
-    box-shadow   : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius   : 8px;
+    box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #ffffff;
-    padding-top: 10px;
+    padding-top     : 10px;
 }
 
 .card-image {
-    width: 100px;
-    height: 100px;
+    width        : 100px;
+    height       : 100px;
     border-radius: 50%;
-    overflow: hidden;
-    margin-left: 50%;
-    left: -50px;
-    position: relative;
-    margin: 10px auto 10px 50%;
+    overflow     : hidden;
+    margin-left  : 50%;
+    left         : -50px;
+    position     : relative;
+    margin       : 10px auto 10px 50%;
+
+    img {
+        width: 100%;
+    }
 }
 
 .card-action {

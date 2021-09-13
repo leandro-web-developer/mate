@@ -20,6 +20,9 @@ a {
   position: relative;
   margin: 10px auto 10px 50%;
 }
+.card-image img {
+  width: 100%;
+}
 
 .card-action {
   position: relative;
