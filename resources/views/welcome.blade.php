@@ -53,6 +53,7 @@
         <div class="row">
 
             @include('diarios.elpais')
+            @include('diarios.elobservador')
 
             <div class="col-12 py-2">
                 <h1></h1>
