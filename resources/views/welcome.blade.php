@@ -36,6 +36,8 @@
                         curl_setopt($ch, CURLOPT_URL, $url);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                         $html = curl_exec($ch);
+                        $html = preg_replace('!\n!','',$html);
+                        var_dump($html);die();
                         curl_close($ch);
                         
                         if (preg_match_all('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $html, $m)) {
