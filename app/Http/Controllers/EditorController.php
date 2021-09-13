@@ -20,6 +20,7 @@ class EditorController extends Controller
 
         // BUSCO ARTICULOS -----
         if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
+            return $m;
             $arr_elpais = [];
             $x = [];
             for ($i = 0; $i < count($m[0]); $i++) {
