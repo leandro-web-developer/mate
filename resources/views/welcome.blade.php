@@ -134,7 +134,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        
+
         <script>
             $(document).ready(function() {
                 $('a[href^="#"]').click(function() {
@@ -145,8 +145,9 @@
                     if (destino.length == 0) {
                         destino = $('html');
                     }
+                    let d = destino.offset().top - 50;
                     $('html, body').animate({
-                        scrollTop: destino.offset().top
+                        scrollTop: d
                     }, 500);
                     return false;
                 });
