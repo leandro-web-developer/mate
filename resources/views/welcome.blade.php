@@ -67,6 +67,10 @@
             background: #fff;
             font-size: 14px;
             color: #636262;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            height: 45px;
         }
 
         .card-button {
