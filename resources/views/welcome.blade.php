@@ -45,11 +45,14 @@
                             $x = [];
                             for ($i = 0; $i < count($m[0]); $i++) {
                                 if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h)) {
-                                    $x['u'] = $url . $h[1];
-                                    $x['t'] = $h[2];
+                                    $uri = $url . $h[1];
+                                    if (!array_search($uri, array_column($arr_elpais, 'u'))) {
+                                        $x['u'] = $uri;
+                                        $x['t'] = $h[2];
                         
-                                    if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
-                                        $x['i'] = $img[1];
+                                        if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
+                                            $x['i'] = $img[1];
+                                        }
                                     }
                                 }
                                 $arr_elpais[] = $x;
