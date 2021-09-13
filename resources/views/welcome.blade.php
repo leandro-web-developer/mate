@@ -30,7 +30,7 @@
         }
 
         .card-image img {
-            max-height: 100%;
+            max-height: 100px;
             max-width: 100%;
             border-radius: 8px 8px 0px 0;
         }
@@ -158,16 +158,18 @@
                     echo "  <div class='col-12 py-2'>";
                     echo "      <div class='row'>";
                     foreach ($arr_elpais as $i) {
-                        echo "       <div class='card-sl noticia'>";
+                        echo "       <div class='col-6 col-sm-4 col-md-3'>";
+                        echo "          <div class='card-sl noticia'>";
                         if (array_key_exists('i', $i)) {
-                            echo "      <div class='card-image'>";
-                            echo "          <img src='{$i['i']}' alt='{$i['t']}' />";
-                            echo '      </div>';
+                            echo "          <div class='card-image'>";
+                            echo "              <img src='{$i['i']}' alt='{$i['t']}' />";
+                            echo '          </div>';
                         }
                         if (array_key_exists('u', $i)) {
-                            echo "      <div class='card-text'>{$i['t']}</div>";
-                            echo "      <a href='{$i['u']}' class='card-button'> Purchase</a>";
+                            echo "          <div class='card-text'>{$i['t']}</div>";
+                            echo "          <a href='{$i['u']}' class='card-button'> Purchase</a>";
                         }
+                        echo '          </div>';
                         echo '       </div>';
                     }
                     echo '      </div>';
