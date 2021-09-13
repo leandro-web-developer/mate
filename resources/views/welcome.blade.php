@@ -45,8 +45,8 @@
                             $x = [];
                             for ($i = 0; $i < count($m[0]); $i++) {
                                 if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h)) {
-                                    $x['u'] = $url . $h[1][$i];
-                                    $x['t'] = $h[2][$i];
+                                    $x['u'] = $url . $h[1];
+                                    $x['t'] = $h[2];
                         
                                     if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
                                         $x['i'] = $img[1];
@@ -57,10 +57,10 @@
                             foreach ($arr_elpais as $i) {
                                 echo "<div class='col-12 py-2'>";
                                 echo "<div class='row'>";
-                                echo "<div class='col-6'><img src='{$i["i"]}' class='img-responsive' alt='{$i["t"]}'></div>";
-                                echo "<div class='col-6'><a href='{$i["u"]}' target='_blank'>{$i["t"]}</a></div>";
-                                echo "</div>";
-                                echo "</div>";
+                                echo "<div class='col-6'><img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
+                                echo "<div class='col-6'><a href='{$i['u']}' target='_blank'>{$i['t']}</a></div>";
+                                echo '</div>';
+                                echo '</div>';
                             }
                         }
                         
@@ -80,6 +80,7 @@
                         //         echo "<div class='col-12 py-2'><a href='{$url}{$urlx}' target='_blank'>{$titulo}</a></div>";
                         //     }
                         // }
+                        
                         ?>
 
 
