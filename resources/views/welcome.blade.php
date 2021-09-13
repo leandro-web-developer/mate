@@ -44,9 +44,9 @@
                             $arr_elpais = [];
                             $x = [];
                             for ($i = 0; $i < count($m[0]); $i++) {
-                                if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $img)) {
-                                    $x['u'] = $url . $m[1][$i];
-                                    $x['t'] = $m[2][$i];
+                                if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h)) {
+                                    $x['u'] = $url . $h[1][$i];
+                                    $x['t'] = $h[2][$i];
                         
                                     if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
                                         $x['i'] = $img[1];
