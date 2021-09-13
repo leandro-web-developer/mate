@@ -61,6 +61,7 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
   height: 45px;
+  -webkit-line-clamp: 2;
 }
 
 .card-button {
