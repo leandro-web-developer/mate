@@ -40,7 +40,7 @@
     <nav class="navbar fixed-top navbar-dark bg-dark text-white">
         <span>Noticias:</span>
         <a class="navbar-brand" href="#noticas-el-pais">El País</a>
-        <a class="navbar-brand" href="#">El Observador</a>
+        <a class="navbar-brand" href="#noticas-el-observador">El Observador</a>
         <a class="navbar-brand" href="#">La diaria</a>
         <a class="navbar-brand" href="#">Caras y caretas</a>
         <span> | </span>
