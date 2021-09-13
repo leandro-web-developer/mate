@@ -25,7 +25,7 @@
 </head>
 
 <body class="antialiased" style="padding-top:100px;">
-    <nav class="navbar fixed-top navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
         <span>Noticias:</span>
         <a class="navbar-brand" href="#noticas-el-pais">El País</a>
         <a class="navbar-brand" href="#">El Observador</a>
