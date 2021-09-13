@@ -73,7 +73,7 @@
                         if (array_key_exists('i', $i)) {
                             echo "              <img src='{$i['i']}' alt='{$i['t']}' />";
                         } else {
-                            echo "              <img src='" . asset('img/no-image.svg') . "' alt='{$i['t']}' />";
+                            echo "              <img src='" . asset('img/no-image.svg') . "' alt='Mate.uy - Sin foto' />";
                         }
                         echo '              </div>';
                         if (array_key_exists('u', $i)) {
