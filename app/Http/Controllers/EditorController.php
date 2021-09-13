@@ -39,7 +39,7 @@ class EditorController extends Controller
             }
 
             if (count($arr_elpais) > 0) {
-                $elpais = Self::html('EL PAÍS', $arr_elpais);
+                $elpais = Self::html('EL PAÍS', $arr_elpais, 'noticas-el-pais');
                 $ourFileName = "/var/www/lea/mate/resources/views/diarios/elpais.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elpais);
@@ -71,7 +71,7 @@ class EditorController extends Controller
             }
 
             if (count($arr_elobservador) > 0) {
-                $elobservador = Self::html('EL OBSERVADOR', $arr_elobservador);
+                $elobservador = Self::html('EL OBSERVADOR', $arr_elobservador, 'noticas-el-observador');
                 $ourFileName = "/var/www/lea/mate/resources/views/diarios/elobservador.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elobservador);
@@ -97,9 +97,9 @@ class EditorController extends Controller
     /**
      * 
      */
-    private static function html($nombre, $arr)
+    private static function html($nombre, $arr, $ancla)
     {
-        $diario = "<H1 class='py-4' id='noticas-el-pais'>NOTICIAS DE DIARIO {$nombre}</H1>";
+        $diario = "<H1 class='py-4' id='{$ancla}'>NOTICIAS DE DIARIO {$nombre}</H1>";
         $diario .= "<div class='row'>";
         $diario .= "  <div class='col-12 py-2'>";
         $diario .= "      <div class='row'>";
