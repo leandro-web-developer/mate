@@ -27,6 +27,23 @@
 <body class="antialiased" style="">
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12"><h1>Ir a las noticias de:</h1></div>
+                    <div class="col-6">
+                        <h2><a href="#">El País</a></h2>
+                    </div>
+                    <div class="col-6">
+                        <h2><a href="#">El Gallito trabajo</a></h2>
+                    </div>
+                    <div class="col-6">
+                        <h2><a href="#">El Observador</a></h2>
+                    </div>
+                    <div class="col-6">
+                        <h2><a href="#">La diaria</a></h2>
+                    </div>
+                </div>
+            </div>
             <?php
             
             // EL PAIS -----------
