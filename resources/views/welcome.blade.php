@@ -66,7 +66,7 @@
                     foreach ($arr_elpais as $i) {
                         echo "       <div class='col-6 col-sm-3 col-md-4'>";
                         if (array_key_exists('i', $i)) {
-                            echo "      <img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
+                            echo "      <img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'>";
                         }
                         if (array_key_exists('u', $i)) {
                             echo "      <p><a href='{$i['u']}' target='_blank'>{$i['t']}</a></p>";
