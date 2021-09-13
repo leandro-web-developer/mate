@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 class EditorController extends Controller
 {
     public static function elPais()
@@ -89,12 +91,13 @@ class EditorController extends Controller
         curl_close($ch);
 
         // BUSCO ARTICULOS -----
-        if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
+        if (preg_match_all('!<div class="\s*linea[^>]>\s*<a href="([^"]+)">\s*<div class="imagen.*?">\s*<figure class="figure">.*?<img .*?data-src="([^"]+)".*?</a>.*?<h3 class="volanta .*?">.*?title="([^"]+)">.*?</a>\s*</h3>\s*<h2.*?>.*?>([^<]+)</a>!iu', $html, $m)) {
+            return $m;
+
             $arr_elpais = [];
             for ($i = 0; $i < count($m[0]); $i++) {
                 // EN CADA ARTICULO BUSCO URL Y TITULO -----
-                if (preg_match('!<div class="\s*linea[^>]>\s*<a href="([^"]+)">\s*<div class="imagen.*?">\s*<figure class="figure">.*?<img .*?data-src="([^"]+)".*?</a>.*?<h3 class="volanta .*?">.*?title="([^"]+)">.*?</a>\s*</h3>\s*<h2.*?>.*?>([^<]+)</a>>!iu', $m[0][$i], $h)) {
-                    return $h;
+                if (preg_match('!asdaadasdasdasda!iu', $m[0][$i], $h)) {
                     // $uri = $url . $h[1];
                     // // SOLO AGREGO AL ARRAY GENERAL SI NO EXISTE YA EN EL MISMO -----
                     // if (!array_search($uri, array_column($arr_elpais, 'u'))) {
