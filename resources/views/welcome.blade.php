@@ -54,7 +54,7 @@
                                 }
                                 $arr_elpais[] = $x;
                             }
-                            var_dump($arr_elpais);
+                            echo json_encode($arr_elpais);
                             if (count($arr_elpais) > 0) {
                                 foreach ($arr_elpais as $i) {
                                     echo "<div class='col-12 py-2'>";
