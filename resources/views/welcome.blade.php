@@ -25,25 +25,21 @@
 </head>
 
 <body class="antialiased" style="">
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <span>Noticias:</span>
+        <a class="navbar-brand" href="#">xxxxx</a>
+        <a class="navbar-brand" href="#">xxxxx</a>
+        <a class="navbar-brand" href="#">xxxxx</a>
+        <a class="navbar-brand" href="#">xxxxx</a>
+        <span> | </span>
+        Sobre el mate
+        <span> | </span>
+        Sobre Uruguay
+    </nav>
+
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12"><h1>Ir a las noticias de:</h1></div>
-                    <div class="col-6">
-                        <h2><a href="#">El País</a></h2>
-                    </div>
-                    <div class="col-6">
-                        <h2><a href="#">El Gallito trabajo</a></h2>
-                    </div>
-                    <div class="col-6">
-                        <h2><a href="#">El Observador</a></h2>
-                    </div>
-                    <div class="col-6">
-                        <h2><a href="#">La diaria</a></h2>
-                    </div>
-                </div>
-            </div>
+
             <?php
             
             // EL PAIS -----------
