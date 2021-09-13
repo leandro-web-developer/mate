@@ -166,8 +166,7 @@
                         }
                         if (array_key_exists('u', $i)) {
                             echo "      <div class='card-text'>{$i['t']}</div>";
-                            echo "          <a href='{$i['u']}' class='card-button'> Purchase</a>";
-                            echo '      </div>';
+                            echo "      <a href='{$i['u']}' class='card-button'> Purchase</a>";
                         }
                         echo '       </div>';
                     }
