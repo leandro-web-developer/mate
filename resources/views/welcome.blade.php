@@ -64,12 +64,14 @@
                     echo "  <div class='col-12 py-2'>";
                     echo "      <div class='row'>";
                     foreach ($arr_elpais as $i) {
+                        echo "       <div class='col-6 col-sm-3 col-md-4'>";
                         if (array_key_exists('i', $i)) {
-                            echo "<div class='col-6 col-sm-3 col-md-4'><img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
+                            echo "      <img src='{$i['i']}' class='img-responsive' alt='{$i['t']}'></div>";
                         }
                         if (array_key_exists('u', $i)) {
-                            echo "<div class='col-6'><p><a href='{$i['u']}' target='_blank'>{$i['t']}</a></p></div>";
+                            echo "      <p><a href='{$i['u']}' target='_blank'>{$i['t']}</a></p>";
                         }
+                        echo '       </div>';
                     }
                     echo '      </div>';
                     echo '  </div>';
