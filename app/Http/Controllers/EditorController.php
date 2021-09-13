@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class EditorController extends Controller
+{
+    public static function elPais()
+    {
+        // EL PAIS -----------
+        header('content-type:text/plain');
+        $url = 'https://www.elpais.com.uy';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $html = curl_exec($ch);
+        $html = preg_replace('!\n!', '', $html);
+        curl_close($ch);
+
+        // BUSCO ARTICULOS -----
+        if (preg_match_all('!<article[^>]*>(.*?)</article>!iu', $html, $m)) {
+            echo '<H1 class="py-4" id="noticas-el-pais">NOTICIAS DE DIARIO EL PAÍS</H1>';
+            $arr_elpais = [];
+            $x = [];
+            for ($i = 0; $i < count($m[0]); $i++) {
+                // EN CADA ARTICULO BUSCO URL Y TITULO -----
+                if (preg_match('!<h2 class="title">\s*<a [^>]*href="([^"]+)"[^>]*>([^<]+)</a>!iu', $m[0][$i], $h)) {
+                    $uri = $url . $h[1];
+                    // SOLO AGREGO AL ARRAY GENERAL SI NO EXISTE YA EN EL MISMO -----
+                    if (!array_search($uri, array_column($arr_elpais, 'u'))) {
+                        $x['u'] = $uri;
+                        $x['t'] = $h[2];
+
+                        // SI ENCONTRE LO DEMAS ENTONCES BUSCO LA IMAGEN -----
+                        if (preg_match('!<img[^>]*src="([^"]+)"!iu', $m[0][$i], $img)) {
+                            $x['i'] = $img[1];
+                        }
+                    }
+                }
+                $arr_elpais[] = $x;
+            }
+
+            if (count($arr_elpais) > 0) {
+                $elpais = "";
+                $elpais .= "<div class='row'>";
+                $elpais .= "  <div class='col-12 py-2'>";
+                $elpais .= "      <div class='row'>";
+                foreach ($arr_elpais as $i) {
+                    if (array_key_exists('u', $i)) {
+                        $elpais .= "       <div class='col-6 col-sm-4 col-md-3 py-2'>";
+                        $elpais .= "          <div class='card-sl noticia'>";
+                        $elpais .= "              <div class='card-image'>";
+                        if (array_key_exists('i', $i)) {
+                            $elpais .= "              <img src='{$i['i']}' alt='{$i['t']}' />";
+                        } else {
+                            $elpais .= "              <img src='" . asset('img/no-image.svg') . "' alt='Mate.uy - Sin foto' />";
+                        }
+                        $elpais .= '              </div>';
+                        $elpais .= "              <div class='card-text'>{$i['t']}</div>";
+                        $elpais .= "              <a href='{$i['u']}' class='card-button'>Ver en El País</a>";
+                        $elpais .= '          </div>';
+                        $elpais .= '       </div>';
+                    }
+                }
+                $elpais .= '      </div>';
+                $elpais .= '  </div>';
+                $elpais .= '</div>';
+
+                $pagina = fopen('/var/www/lea/mate/views/diarios/elpais.blade.php', "r");
+                echo $pagina;
+
+            }
+        }
+    }
+}
