@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Controllers\EditorController;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,4 +65,16 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
+
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->call('App\Http\Controllers\EditorController@elPais')->daily()->timezone('America/Montevideo')->at('09:25');
+        $schedule->call('App\Http\Controllers\EditorController@elObservador')->daily()->timezone('America/Montevideo')->at('09:31');
+    }
 }
