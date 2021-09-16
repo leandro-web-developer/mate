@@ -79,6 +79,12 @@
                     </div>
                 </div>
 
+                <div class="row bg-light py-5">
+                    <div class="col-12">
+                        @include('blocks.mate')
+                    </div>
+                </div>
+
                 <div class="row bg-primary py-5">
                     <div class="col-12">
                         @include('blocks.faqs')
