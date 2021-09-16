@@ -20,7 +20,7 @@
     <META NAME="robots" content="ALL">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEDC9PN0FT"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEDC9PN0FT"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -30,7 +30,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-XEDC9PN0FT');
-    </script>
+    </script> --}}
 
 
     <!-- Fonts -->
@@ -63,39 +63,66 @@
         Sobre Uruguay
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
+            <div class="col-12">
 
-            @include('diarios.elpais')
-            @include('diarios.elobservador')
+                {{-- PRESENTACION Y FILTRO ------ --}}
+                <div class="row bg-white">
+                    <div class="col-12 col-md-6 offset-md-3 py-5">
+                        <h1>¿Qué es mate.uy?</h1>
+                        <h2>Somos un portal de resúmenes</h2>
+                        <p>
+                            Nos dedicamos a brindarte en un solo lugar el acceso a las noticias de los principales
+                            periódicos del Uruguay.<br>
+                            Con un único filtro podés buscar fácil lo que te interesa<br>
+                            <b>¿A qué estás esperando? ¡Arrancá a buscar!</b>
+                        </p>
+                        <input type="text" class="form-control" id="filtro">
+                    </div>
+                </div>
 
-            <div class="col-12 py-2">
-                <h1></h1>
+                @include('diarios.elpais')
+                @include('diarios.elobservador')
+
+                <div class="col-12 py-2">
+                    <h1></h1>
+                </div>
+
             </div>
 
-        </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script>
+                window.filtrarTabla = (texto) => {
+                    $(`.noticia`).filter(
+                        function() {
+                            let text = $(this).attr('data-text').toLowerCase();
+                            $(this).toggle(text.indexOf(texto) > -1);
+                        }
+                    );
+                };
 
-        <script>
-            $(document).ready(function() {
-                $('a[href^="#"]').click(function() {
-                    var destino = $(this.hash);
-                    if (destino.length == 0) {
-                        destino = $('a[name="' + this.hash.substr(1) + '"]');
-                    }
-                    if (destino.length == 0) {
-                        destino = $('html');
-                    }
-                    let d = destino.offset().top - 50;
-                    $('html, body').animate({
-                        scrollTop: d
-                    }, 500);
-                    return false;
+                $(document).ready(function() {
+                    $('a[href^="#"]').click(function() {
+                        var destino = $(this.hash);
+                        if (destino.length == 0) {
+                            destino = $('a[name="' + this.hash.substr(1) + '"]');
+                        }
+                        if (destino.length == 0) {
+                            destino = $('html');
+                        }
+                        let d = destino.offset().top - 50;
+                        $('html, body').animate({
+                            scrollTop: d
+                        }, 500);
+                        return false;
+                    });
+
+
                 });
-            });
-        </script>
+            </script>
 </body>
 
 </html>

@@ -99,13 +99,13 @@ class EditorController extends Controller
      */
     private static function html($nombre, $arr, $ancla)
     {
-        $diario = "<H1 class='py-4' id='{$ancla}'>NOTICIAS DE DIARIO {$nombre}</H1>";
+        $diario = "<H1 class='pb-3' id='{$ancla}'>NOTICIAS DE DIARIO {$nombre}</H1>";
         $diario .= "<div class='row'>";
         $diario .= "  <div class='col-12 py-2'>";
         $diario .= "      <div class='row'>";
         foreach ($arr as $i) {
             if (array_key_exists('u', $i)) {
-                $diario .= "       <div class='col-6 col-sm-4 col-md-3 py-2'>";
+                $diario .= "       <div class='col-6 col-sm-4 col-md-3 py-2 noticia' data-text='{$i['t']}'>";
                 $diario .= "          <div class='card-sl noticia'>";
                 $diario .= "              <div class='card-image'>";
                 if (array_key_exists('i', $i)) {
