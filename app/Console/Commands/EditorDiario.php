@@ -38,6 +38,7 @@ class EditorDiario extends Command
      */
     public function handle()
     {
-        $editor = new EditorController();
+        EditorController::elPais();
+        EditorController::elObservador();
     }
 }
