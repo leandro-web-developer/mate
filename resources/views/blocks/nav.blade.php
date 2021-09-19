@@ -12,22 +12,22 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="#noticas-el-observador">El Observador</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white" href="#body">La diaria</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="#body">Caras y caretas</a>
-            </li>
+            </li> --}}
         </ul>
 
         <span class="text-white d-none d-md-block">|</span>
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#noticas-el-pais">El País</a>
+                <a class="nav-link text-white" href="#nota-mate">El Mate (infusión)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#noticas-el-observador">El Observador</a>
+                <a class="nav-link text-white" href="#nota-uruguay">Uruguay</a>
             </li>
         </ul>
 

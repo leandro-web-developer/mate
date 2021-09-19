@@ -85,6 +85,12 @@
                     </div>
                 </div>
 
+                <div class="row bg-white py-5">
+                    <div class="col-12">
+                        @include('blocks.uruguay')
+                    </div>
+                </div>
+
                 <div class="row bg-primary py-5">
                     <div class="col-12">
                         @include('blocks.faqs')
