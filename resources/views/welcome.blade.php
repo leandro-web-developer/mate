@@ -82,8 +82,6 @@
 
                 <div class="row">
                     <div class="col 12">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                crossorigin="anonymous"></script>
                         <!-- header2 -->
                         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
                             data-ad-slot="7648021854" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -104,8 +102,6 @@
                     <div class="col-12 col-sm-9">
                         <div class="row bg-light py-5">
                             <div class="col-12">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                                crossorigin="anonymous"></script>
                                 <!-- elpais -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="5045075090"
@@ -113,9 +109,7 @@
                                 <script>
                                     (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
-
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                                crossorigin="anonymous"></script>
+                                
                                 <!-- elpais2 -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="9584947727"
@@ -139,8 +133,7 @@
                     <div class="col-12 col-sm-9">
                         <div class="row bg-light py-5">
                             <div class="col-12">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                                crossorigin="anonymous"></script>
+                                
                                 <!-- elobservador -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="8271866050"
@@ -148,9 +141,7 @@
                                 <script>
                                     (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
-
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                                crossorigin="anonymous"></script>
+                                
                                 <!-- elobservador2 -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="8373946017"
@@ -165,8 +156,6 @@
 
                 <div class="row">
                     <div class="col 12">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                crossorigin="anonymous"></script>
                         <!-- elmate -->
                         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
                             data-ad-slot="4830286829" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -233,8 +222,6 @@
                     });
                 });
             </script>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                        crossorigin="anonymous"></script>
 </body>
 
 </html>
