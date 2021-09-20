@@ -78,17 +78,15 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col 12">
+                    
+                    {{-- <div class="col 12">
                         <!-- header2 -->
-                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
+                        < ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
                             data-ad-slot="7648021854" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script>
+                        < script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="row">
