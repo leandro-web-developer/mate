@@ -45,7 +45,12 @@ class EditorController extends Controller
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elpais);
                 fclose($ourFileHandle);
+                return 200;
+            } else {
+                return 401;
             }
+        } else {
+            return 400;
         }
     }
 
@@ -79,10 +84,10 @@ class EditorController extends Controller
                 fwrite($ourFileHandle, $elobservador);
                 fclose($ourFileHandle);
                 return 200;
-            }else{
+            } else {
                 return 401;
             }
-        }else{
+        } else {
             return 400;
         }
     }
