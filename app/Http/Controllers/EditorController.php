@@ -78,7 +78,12 @@ class EditorController extends Controller
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elobservador);
                 fclose($ourFileHandle);
+                return 200;
+            }else{
+                return 401;
             }
+        }else{
+            return 400;
         }
     }
 
