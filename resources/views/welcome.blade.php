@@ -43,6 +43,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
+                                                crossorigin="anonymous"></script>
 </head>
 
 <body class="antialiased bg-white" id="body">
@@ -69,8 +72,7 @@
 
                 <div class="row">
                     <div class="col 12">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                crossorigin="anonymous"></script>
+                        
                         <!-- header -->
                         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
                             data-ad-slot="4943350357" data-ad-format="auto" data-full-width-responsive="true"></ins>
