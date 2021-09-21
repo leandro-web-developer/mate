@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class EditorController extends Controller
 {
+
+    const RUTA = '/var/www/lea/mate/resources/views/diarios/';
+    // const RUTA = '/workspace/resources/views/diarios/';
+
+
     /**
      * 
      */
@@ -40,8 +45,7 @@ class EditorController extends Controller
 
             if (count($arr_elpais) > 0) {
                 $elpais = Self::html('EL PAÍS', $arr_elpais, 'noticas-el-pais');
-                // $ourFileName = "/var/www/lea/mate/resources/views/diarios/elpais.blade.php";
-                $ourFileName = "/workspace/resources/views/diarios/elpais.blade.php";
+                $ourFileName = self::RUTA . "elpais.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elpais);
                 fclose($ourFileHandle);
@@ -78,8 +82,7 @@ class EditorController extends Controller
 
             if (count($arr_elobservador) > 0) {
                 $elobservador = Self::html('EL OBSERVADOR', $arr_elobservador, 'noticas-el-observador');
-                // $ourFileName = "/var/www/lea/mate/resources/views/diarios/elobservador.blade.php";
-                $ourFileName = "/workspace/resources/views/diarios/elobservador.blade.php";
+                $ourFileName = self::RUTA . "elobservador.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elobservador);
                 fclose($ourFileHandle);
