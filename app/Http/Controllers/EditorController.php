@@ -44,7 +44,7 @@ class EditorController extends Controller
             }
 
             if (count($arr_elpais) > 0) {
-                $elpais = Self::html('EL PAÍS', $arr_elpais, 'noticas-el-pais');
+                $elpais = Self::html('El País', $arr_elpais, 'noticas-el-pais');
                 $ourFileName = self::RUTA . "elpais.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elpais);
@@ -81,7 +81,7 @@ class EditorController extends Controller
             }
 
             if (count($arr_elobservador) > 0) {
-                $elobservador = Self::html('EL OBSERVADOR', $arr_elobservador, 'noticas-el-observador');
+                $elobservador = Self::html('El Observador', $arr_elobservador, 'noticas-el-observador');
                 $ourFileName = self::RUTA . "elobservador.blade.php";
                 $ourFileHandle = fopen($ourFileName, 'w');
                 fwrite($ourFileHandle, $elobservador);
@@ -114,7 +114,7 @@ class EditorController extends Controller
      */
     private static function html($nombre, $arr, $ancla)
     {
-        $diario = "<H1 class='pb-3' id='{$ancla}'>NOTICIAS DE DIARIO {$nombre}</H1>";
+        $diario = "<H1 class='pb-3' id='{$ancla}'>Noticias de Diario {$nombre}</H1>";
         $diario .= "<div class='row'>";
         $diario .= "  <div class='col-12 py-2'>";
         $diario .= "      <div class='row'>";
@@ -130,7 +130,7 @@ class EditorController extends Controller
                 }
                 $diario .= '              </div>';
                 $diario .= "              <div class='card-text'>{$i['t']}</div>";
-                $diario .= "              <a href='{$i['u']}' class='card-button'>Ver en El País</a>";
+                $diario .= "              <a href='{$i['u']}' target='_blank' class='card-button'>Ver en {$nombre}</a>";
                 $diario .= '          </div>';
                 $diario .= '       </div>';
             }
