@@ -20,7 +20,7 @@
     <META NAME="robots" content="ALL">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEDC9PN0FT"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEDC9PN0FT"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -30,7 +30,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-XEDC9PN0FT');
-    </script> --}}
+    </script>
 
 
     <!-- Fonts -->
