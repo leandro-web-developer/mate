@@ -45,7 +45,7 @@
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3287845280992455"
-                                                crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body class="antialiased bg-white" id="body">
@@ -72,7 +72,7 @@
 
                 <div class="row">
                     <div class="col 12">
-                        
+
                         <!-- header -->
                         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
                             data-ad-slot="4943350357" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -80,7 +80,7 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
-                    
+
                     {{-- <div class="col 12">
                         <!-- header2 -->
                         < ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3287845280992455"
@@ -109,7 +109,7 @@
                                 <script>
                                     (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
-                                
+
                                 <!-- elpais2 -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="9584947727"
@@ -133,7 +133,7 @@
                     <div class="col-12 col-sm-9">
                         <div class="row bg-light py-5">
                             <div class="col-12">
-                                
+
                                 <!-- elobservador -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="8271866050"
@@ -141,7 +141,7 @@
                                 <script>
                                     (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
-                                
+
                                 <!-- elobservador2 -->
                                 <ins class="adsbygoogle" style="display:block"
                                     data-ad-client="ca-pub-3287845280992455" data-ad-slot="8373946017"
